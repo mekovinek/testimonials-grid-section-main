@@ -1,0 +1,132 @@
+body{
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Barlow Semi Condensed ;
+}
+
+main{
+    display: grid;
+    width: 85%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    'a1 a1 a2 a5'
+    'a3 a4 a4 a5'
+    ;
+    gap: 45px;
+    max-width: 1500px;
+}
+
+p{
+    color:white;
+}
+
+.account{
+    display: grid;
+    grid-template-areas: 
+    'a1 a2'
+    'a1 a3'
+    ;
+    width: 300px;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px 0 10px 0;
+}
+
+.account img{
+    border-radius: 50%;
+    grid-area: a1;
+    margin-right: 15px;
+    width: 30px;
+    border: 3px solid rgba(255, 255, 255, 0.301);
+}
+
+.account-header-1{
+    grid-area: a2;
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.account-header-2{
+    font-size: 0.8em;
+    grid-area: a3;
+    margin: 0;
+}
+
+.card{
+    padding: 33px;
+    box-shadow: 0 0 15px 10px rgba(185, 185, 185, 0.685);
+    border-radius: 15px;
+}
+
+.card:nth-child(1){
+    background-color: hsl(263, 55%, 52%);
+    grid-area: a1;
+    background-image: url("images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: 90% 0px;
+    background-size: 132px;
+}
+
+.card:nth-child(2){
+    background-color: hsl(217, 19%, 35%);
+    grid-area: a2;
+}
+
+.card:nth-child(3){
+    background-color: white;
+    grid-area: a3;
+}
+
+.card:nth-child(4){
+    background-color:   hsl(219, 29%, 14%) ;
+    grid-area: a4;
+}
+
+.card:nth-child(4) img{
+    border-color: hsl(264, 82%, 80%);
+}
+
+.card:nth-child(5){
+    background-color: white;
+    grid-area: a5;
+}
+
+.card:nth-child(3) p{
+    color: hsl(217, 19%, 35%);
+}
+
+.card:nth-child(5) p{
+    color: hsl(217, 19%, 35%);
+}
+
+.content-header{
+    font-weight: bold;
+    font-size: 1.5em;
+    line-height: 1.2em;
+}
+
+.content-quote{
+    font-size: 1.2em;
+    line-height: 1.3em;
+}
+
+@media screen and (max-width:1400px) {
+
+    main{
+        grid-template-areas: 
+        "a1"
+        "a2"
+        "a3"
+        "a4"
+        "a5"
+        ;
+        width: 356px;
+    }
+
+}
